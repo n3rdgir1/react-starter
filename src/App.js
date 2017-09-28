@@ -1,20 +1,31 @@
 import React, { Component } from 'react';
-import { Navbar, NavItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import './App.css';
+import Kana from './Kana';
 
 class App extends Component {
-  handleSelect(selectedKey) {
-    alert(selectedKey)
+  constructor() {
+    super()
+    this.state = {
+      kana: 'hiragana'
+    }
   }
 
   render() {
     return (
       <div className="main">
-        <Navbar bsStyle="pills" activeKey={1} onSelect={this.handleSelect}>
-          <NavItem eventKey={1} href="/home">NavItem 1 content</NavItem>
-          <NavItem eventKey={2} title="Item">NavItem 2 content</NavItem>
-          <NavItem eventKey={3} disabled>NavItem 3 content</NavItem>
+        <Navbar>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <a href="/">Kanas</a>
+            </Navbar.Brand>
+          </Navbar.Header>
+          <Nav>
+            <NavItem eventKey={1} href="#">Hiragana</NavItem>
+            <NavItem eventKey={2} href="#">Katakana</NavItem>
+          </Nav>
         </Navbar>
+        <Kana type={this.state.kana} />
       </div>
     );
   }
