@@ -11,23 +11,27 @@ class App extends Component {
     }
   }
 
+  kana(type) {
+    this.setState({kana: type})
+  }
+
   render() {
     return (
       <div className="main">
-        <Navbar>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a href="/">Kanas</a>
-            </Navbar.Brand>
-          </Navbar.Header>
-          <Nav>
-            <NavItem eventKey={1} href="#">Hiragana</NavItem>
-            <NavItem eventKey={2} href="#">Katakana</NavItem>
-          </Nav>
-        </Navbar>
-        <Kana type={this.state.kana} />
+      <Navbar>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a href="/">Kanas</a>
+          </Navbar.Brand>
+        </Navbar.Header>
+        <Nav>
+          <NavItem eventKey={1} href="#" onClick={() => this.kana('hiragana')}>Hiragana</NavItem>
+          <NavItem eventKey={2} href="#" onClick={() => this.kana('katakana')}>Katakana</NavItem>
+        </Nav>
+      </Navbar>
+      <Kana type={this.state.kana} />
       </div>
-    );
+    )
   }
 }
 
