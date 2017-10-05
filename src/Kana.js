@@ -25,7 +25,9 @@ class Kana extends Component {
     var answerIndex = this.random()
     return (
       <div>
-        {this.answer(answerIndex).romanji}
+        <div className='question'>
+          What is the <span className='type'>{this.props.type}</span> of <span className='romanji'>{this.answer(answerIndex).romanji}</span>?
+        </div>
         {this.options(answerIndex)}
       </div>
     );
