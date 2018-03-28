@@ -22,6 +22,14 @@
 }
 
 .answers .card {
-  font-size: 10em;
+  font-size: 8em;
   text-align: center;
+}
+
+.answers .correct {
+  color: green;
+}
+
+.answers .incorrect {
+  color: red;
 }
