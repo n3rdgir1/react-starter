@@ -14,10 +14,14 @@ class Kana extends Component {
 
   options(answerIndex) {
     return <div className='answers'>
-      <Option character={characters[this.random()]} type={this.props.type} />
-      <Option character={characters[this.random()]} type={this.props.type} />
-      <Option character={this.answer(answerIndex)} answer={true} type={this.props.type} />
-      <Option character={characters[this.random()]} type={this.props.type} />
+      <div className='row'>
+        <Option character={characters[this.random()]} type={this.props.type} />
+        <Option character={characters[this.random()]} type={this.props.type} />
+      </div>
+      <div className='row'>
+        <Option character={this.answer(answerIndex)} answer={true} type={this.props.type} />
+        <Option character={characters[this.random()]} type={this.props.type} />
+      </div>
     </div>
   }
 

@@ -1,0 +1,14 @@
+.navbar {
+  margin-bottom: 0;
+}
+.question{
+  color: blue;
+  font-size: 2em;
+  text-align: center;
+  margin: .8em 0;
+}
+
+.answers .card {
+  font-size: 10em;
+  text-align: center;
+}
