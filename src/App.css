@@ -1,9 +1,17 @@
 .navbar {
   margin-bottom: 0;
 }
+
+.nav-item,
+.nav-item:visited,
+.nav-item:hover,
+.nav-item:active {
+  color: rgba(0,0,0,.9);
+}
+
 .question{
   color: blue;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
   margin: .8em 0;
 }

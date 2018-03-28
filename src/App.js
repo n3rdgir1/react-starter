@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import './App.css';
 import Kana from './Kana';
 
@@ -18,18 +17,15 @@ class App extends Component {
   render() {
     return (
       <div className="main">
-      <Navbar>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <a href="/">Kanas</a>
-          </Navbar.Brand>
-        </Navbar.Header>
-        <Nav>
-          <NavItem eventKey={1} href="#" onClick={() => this.kana('hiragana')}>Hiragana</NavItem>
-          <NavItem eventKey={2} href="#" onClick={() => this.kana('katakana')}>Katakana</NavItem>
-        </Nav>
-      </Navbar>
-      <Kana type={this.state.kana} />
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <a className="navbar-brand" href="/">Kanas</a>
+          <div className="navbar" id="navbarNav">
+            <a className="nav-item nav-link active" href="#" onClick={() => this.kana('hiragana') }>Hiragana</a>
+            <a className="nav-item nav-link active" href="#" onClick={() => this.kana('katakana') }>Katakana</a>
+          </div>
+        </nav>
+
+        <Kana type={this.state.kana} />
       </div>
     )
   }
