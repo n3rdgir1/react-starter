@@ -8,6 +8,11 @@
   margin: .8em 0;
 }
 
+.answers {
+  max-width: 600px;
+  margin: auto;
+}
+
 .answers .card {
   font-size: 10em;
   text-align: center;
